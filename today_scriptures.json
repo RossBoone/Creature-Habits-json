@@ -21,10 +21,10 @@
     "Address Script 2": "2 Kings 17:24-41",
     "Address Script 3": "1 Timothy 3:14-4:5",
     "Address Script 4": "Deuteronomy 1:19-46",
-    "Script 1 audio": "",
-    "Script 2 audio": "",
-    "Script 3 audio": "",
-    "Script 4 audio": "",
+    "Script 1 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/Ps.101.d246259ec38a8c09f7050d8c2991a17e.mp3",
+    "Script 2 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/2Kgs.17.3bf6fcff9234e14585c506e9f0f4b823.mp3",
+    "Script 3 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/1Tim.3.0739171bc9a7c9db31e3e72797f7729f.mp3",
+    "Script 4 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/Deut.1.cbed4fb837d80dca391ada5934cdb522.mp3",
     "Verse to start at for audio": 93
   },
   {
