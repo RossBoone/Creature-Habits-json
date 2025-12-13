@@ -21,11 +21,11 @@
     "Address Script 2": "1 Samuel 2:1-8",
     "Address Script 3": "Luke 3:1-18",
     "Address Script 4": "Exodus 31",
-    "Script 1 audio": "",
-    "Script 2 audio": "",
-    "Script 3 audio": "",
+    "Script 1 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/Ps.146.784e9f7b42a5a24d7f181a9ddef1a936.mp3",
+    "Script 2 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/1Sam.2.ec21be763b11b856eff344ab40d49744.mp3",
+    "Script 3 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/Luke.3.81ecd194e04a1e9eb0ba8a8ef7a42155.mp3",
     "Script 4 audio": "",
-    "Verse to start at for audio": "2"
+    "Verse to start at for audio": ""
   },
   {
     "Date": "",
