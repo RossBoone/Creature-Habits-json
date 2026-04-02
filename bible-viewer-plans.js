@@ -641,22 +641,25 @@ function renderDayDetail() {
     const savedNote = scriptureNotesByPassageId.has(pid) ? scriptureNotesByPassageId.get(pid) : '';
     const displayNote = (savedNote && savedNote.trim()) ? savedNote : DEFAULT_SCRIPTURE_NOTE;
     html += `<div class="plans-passage plans-passage--stack" data-pidx="${idx}">
-      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;width:100%;justify-content:space-between;">
-        <span style="font-weight:600;flex:1;min-width:0;">${escapeHtml(label)}</span>
-        <div class="plans-pass-actions">
-          <button type="button" class="btn bv-go" data-pidx="${idx}">Read</button>
+      <div class="plans-pass-top">
+        <span class="plans-pass-label">${escapeHtml(label)}</span>
+        <div class="plans-pass-top-actions">
+          <label class="plans-pass-check-wrap" title="Appends to your Scripture array: this passage + note below (sign in required)">
+            <input type="checkbox" class="bv-pass-done" data-pidx="${idx}" ${done ? 'checked' : ''}
+              aria-label="Mark ${escapeHtml(label)} as read and save note to Scripture log" />
+          </label>
+          <div class="plans-pass-actions">
+            <button type="button" class="btn bv-go" data-pidx="${idx}">Read</button>
+          </div>
         </div>
       </div>
-      <div class="plans-passage-note" style="margin-top:10px;">
-        <label for="bvNote-${idx}" style="font-size:12px;font-weight:600;color:var(--muted);display:block;margin-bottom:6px;">Notes for this passage</label>
-        <textarea id="bvNote-${idx}" class="bv-pass-note" data-pidx="${idx}" rows="3" placeholder="Notes for this passage…" style="width:100%;box-sizing:border-box;padding:10px;border-radius:10px;border:1px solid var(--border);font-size:14px;font-family:inherit;">${escapeHtml(displayNote)}</textarea>
-        <div style="display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap;">
-          <button type="button" class="btn bv-save-pass-note" data-pidx="${idx}" style="font-size:13px;${done ? '' : 'display:none;'}">Update note only</button>
-          <label style="display:flex;align-items:center;gap:8px;font-weight:600;cursor:pointer;margin:0;">
-            <input type="checkbox" class="bv-pass-done" data-pidx="${idx}" ${done ? 'checked' : ''} />
-            <span>I’ve read this passage</span>
-          </label>
-        </div>
+      <div class="plans-pass-note-below">
+        <label for="bvNote-${idx}" class="plans-pass-note-label">Notes for this passage</label>
+        <textarea id="bvNote-${idx}" class="bv-pass-note plans-pass-note-below-field" data-pidx="${idx}" rows="3"
+          placeholder="Notes for this passage…" aria-label="Notes for ${escapeHtml(label)}">${escapeHtml(displayNote)}</textarea>
+      </div>
+      <div class="plans-pass-secondary"${done ? '' : ' hidden'}>
+        <button type="button" class="btn bv-save-pass-note" data-pidx="${idx}">Update note only</button>
       </div>
     </div>`;
   });
@@ -1100,7 +1103,7 @@ async function init() {
 }
 
 init().then(() => {
-  console.log('[Bible Viewer] Plans module ready (Firebase, tabs, chat). Build: per-passage-notes-v2.');
+  console.log('[Bible Viewer] Plans module ready (Firebase, tabs, chat). Build: plan-notes-below-passage.');
 }).catch(err => {
   console.error('[Bible Viewer] Plans init failed:', err);
 });
