@@ -21,9 +21,9 @@
     "Address Script 2": "Song of Songs 2:8-15",
     "Address Script 3": "Colossians 4:2-5",
     "Address Script 4": "Hosea 6:7-11",
-    "Script 1 audio": "",
-    "Script 2 audio": "",
-    "Script 3 audio": "",
+    "Script 1 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/Ps.16.6f08286a46351a1bb9cdd564f8e60eec.mp3",
+    "Script 2 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/Song.2.55cf6849ca092ec7a04f18ca3aa0f454.mp3",
+    "Script 3 audio": "https://stream.biblegateway.com/bibles/32/niv-dramatized/Col.4.484060fb6b355fe4747f65841efa62a0.mp3",
     "Script 4 audio": "",
     "Verse to start at for audio": ""
   },
